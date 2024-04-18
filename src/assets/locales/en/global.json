@@ -1,0 +1,28 @@
+{
+  "yes": "Yes",
+  "no": "No",
+  "all": "All",
+  "add": "Add",
+  "save": "Save",
+  "update": "Update",
+  "validation": {
+    "minNumber": "You should enter minimum ___NUMBER___ .",
+    "maxNumber": "You should enter maximum ___NUMBER___ .",
+    "invalidVariable": "Invalid Variable",
+    "url": "Please enter a valid address."
+  },
+  "popup": {
+    "accept": "Accept",
+    "close": "Close",
+    "cancel": "Cancel",
+    "warning": "Warning",
+    "success": "Transaction successful",
+    "error": "Error",
+    "delete": "Remove",
+    "information": "Information"
+  },
+  "somethingWentWrong": "Sorry, There Was A Problem With Your Request.",
+  "socketIsNotConnectedYet":"Web socket is not connected yet. Please change settings or active web socket connection.",
+  "socketConnected":"Web socket is connected successfully"
+
+}

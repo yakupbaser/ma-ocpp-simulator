@@ -1,0 +1,12 @@
+{
+  "pageTitle": "Settings",
+  "ocppWSUrl": "OCPP Websocket url",
+  "chargePointCode": "Charge Point Code",
+  "heartbeatInterval": "Heartbeat Interval(sec.)",
+  "meterValueInterval": "Meter Value Interval(sec.)",
+  "ocppWSUrlRule": "Plase enter OCPP Websocket url",
+  "chargePointCodeRule": "Please enter Charge Point Code",
+  "heartbeatIntervalRule": "Please enter Heartbeat Interval",
+  "meterValueIntervalRule": "Please enter Meter Value Interval",
+  "updatedSuccessfully": "Settings updated successfully"
+}

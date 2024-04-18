@@ -1,0 +1,191 @@
+.app-message {
+  position: fixed;
+  top: 1vh;
+  left: 10vw;
+  right: 10vw;
+  z-index: 9999;
+}
+.app-content-box span {
+  max-height: 250px;
+  overflow-x: auto;
+}
+.app-content-box {
+  transition: all 0.3s;
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  color: #2F86A6;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 14px;
+  span {
+    max-height: 250px;
+    overflow-x: auto;
+    font-family: "Poppins";
+    font-weight: 500;
+    letter-spacing: 0.6px;
+  }
+
+  &.animate-in {
+    animation: fade-in 0.3s;
+    animation-timing-function: cubic-bezier(0.08, 0.82, 0.17, 1);
+  }
+
+  &.animate-out {
+    animation: fade-out 0.3s;
+    animation-timing-function: cubic-bezier(0.6, 0.04, 0.98, 0.34);
+  }
+}
+@media only screen and (max-width: 1275px) {
+  .app-content-box {
+    left: 25%;
+    transform: translateX(-25%);
+  }
+}
+@media only screen and (max-width: 760px) {
+  .app-content-box {
+    left: 15%;
+    transform: translateX(-15%);
+  }
+}
+@media only screen and (max-width: 500px) {
+  .app-content-box {
+    left: 5%;
+    transform: translateX(-5%);
+  }
+}
+.app-message-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  margin-right: 8px;
+  &.info {
+    -webkit-mask: url("./assets/svg/global/information.resource.svg") no-repeat 50% 50%;
+    mask: url("./assets/svg/global/information.resource.svg") no-repeat 50% 50%;
+    background-color: #73A9AD;
+  }
+  &.success {
+    -webkit-mask: url("./assets/svg/global/success.resource.svg") no-repeat 50% 50%;
+    mask: url("./assets/svg/global/success.resource.svg") no-repeat 50% 50%;
+    background-color: #9BCF53;
+  }
+  &.error {
+    -webkit-mask: url("./assets/svg/global/error.resource.svg") no-repeat 50% 50%;
+    mask: url("./assets/svg/global/error.resource.svg") no-repeat 50% 50%;
+    background-color: #E64848;
+  }
+  &.warn {
+    -webkit-mask: url("./assets/svg/global/warning.resource.svg") no-repeat 50% 50%;
+    mask: url("./assets/svg/global/warning.resource.svg") no-repeat 50% 50%;
+    background-color: #EFD345;
+  }
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+@media only screen and (max-width: 1275px) {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-25%) translateY(-25%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(-25%) translateY(0);
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateX(-25%) translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateX(-25%) translateY(-25%);
+    }
+  }
+}
+@media only screen and (max-width: 760px) {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-15%) translateY(-15%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(-15%) translateY(0);
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateX(-15%) translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateX(-15%) translateY(-15%);
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateX(-5%) translateY(-5%);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(-5%) translateY(0);
+    }
+  }
+
+  @keyframes fade-out {
+    from {
+      opacity: 1;
+      transform: translateX(-5%) translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateX(-5%) translateY(-5%);
+    }
+  }
+}

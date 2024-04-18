@@ -1,0 +1,151 @@
+
+.app-form-item {
+  margin-bottom: 5px;
+  .app-line {
+    height: 1px;
+    background-color: #25020229;
+  }
+  .app-form-item-label {
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    padding-right: 5px !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: right;
+    color: #416D19;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-weight: 500;
+
+    .with-colon::after {
+      content: " :";
+    }
+    @media only screen and (max-width: 768px) {
+      justify-content: flex-start;
+      .with-colon::after {
+        content: "";
+      }
+    }
+
+    label {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    label:hover {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: initial;
+    }
+  }
+  .app-form-item-label.multiple-label-line {
+    label {
+      text-overflow: inherit;
+      overflow: inherit;
+      white-space: initial;
+    }
+  }
+  .app-form-item-content {
+    // padding
+  }
+  .dx-button {
+    height: 35px;
+  }
+}
+.-app-form-item-container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  label {
+    display: none;
+  }
+
+  input {
+    color: #6f6f6f !important;
+    min-height: 23px;
+    border: 1px solid rgba(90, 13, 177, 0.1);
+    background: white;
+    box-shadow: 0px -4px 8px -8px #416D19 inset;
+    width: 100%;
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+    font-family: "Quicksand";
+    font-size: 13px;
+    outline: none;
+    &::placeholder {
+      font-family: "Quicksand";
+      color: #c1c1c1 !important;
+    }
+  }
+  textarea {
+    color: #6f6f6f !important;
+    border: 1px solid rgba(90, 13, 177, 0.1);
+    background: white;
+    box-shadow: 0px -4px 8px -8px #416D19 inset;
+    width: 100%;
+    font-family: "Quicksand";
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 7px;
+    font-size: 13px;
+    outline: none;
+    resize: none;
+    &::placeholder {
+      font-family: "Quicksand";
+      color: #c1c1c1 !important;
+    }
+  }
+  &.has-error::after {
+    pointer-events: none;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    margin-top: -9px;
+    font-family: "Quicksand";
+    width: 18px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: 13px;
+    background-color: #d9534f;
+    color: #fff;
+    content: "!";
+    border-radius: 50%;
+  }
+  &.has-error label.active {
+    z-index: 5;
+    display: flex;
+    font-size: 13px;
+    font-weight: 500;
+    width: calc(100% - 20px);
+    background-color: #d9534f;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    overflow: visible;
+    position: absolute;
+    top: calc(100%);
+    color: white;
+  }
+  .react-datepicker__input-container {
+    width: calc(100% - 10px) !important;
+  }
+  .react-datepicker-wrapper {
+    width: calc(100%) !important;
+  }
+  &.has-error .react-datepicker-popper {
+    margin-top: 25px;
+  }
+}

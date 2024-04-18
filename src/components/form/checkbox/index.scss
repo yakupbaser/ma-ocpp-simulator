@@ -1,0 +1,29 @@
+.app-checkbox {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  input[type="checkbox"] {
+    margin: 7px 10px 7px 0px;
+    display: grid;
+    place-content: center;
+    height: 16px;
+    width: 16px;
+    accent-color: #530eb5;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    // display: inline-block;
+    // border: 1px solid;
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  @media (max-width: 700px) {
+    input[type="checkbox"] {
+      flex-shrink: 0;
+      margin-right: 8px;;
+    }
+  }
+}

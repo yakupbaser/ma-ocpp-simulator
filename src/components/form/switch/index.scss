@@ -1,0 +1,110 @@
+@for $i from 1 through 100 {
+  $width: $i; //60
+  $height: $i * 0.5667; //34
+  // #{ ($i * 0.4333) }px;
+  .app-switch-#{$i} {
+    position: relative;
+    display: inline-block;
+    width: #{$width}px;
+    height: #{$height}px;
+
+    .app-switch-slider:not(.loading):before {
+      position: absolute;
+      content: "";
+      height: #{ ($width * 0.4333) }px;
+      width: #{ ($width * 0.4333) }px;
+      left: #{ ($width * 0.0333333) }px;
+      bottom: #{ ($width * 0.0633333) }px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    input:checked + .app-switch-slider {
+      background-color: #530eb5;
+    }
+
+    input:focus + .app-switch-slider {
+      box-shadow: 0 0 1px #530eb5;
+    }
+
+    .app-switch-slider.round {
+      border-radius: 34px;
+    }
+
+    .app-switch-slider.round:before {
+      border-radius: 50%;
+    }
+
+    @keyframes app-switch-slider-loading {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @-webkit-keyframes app-switch-slider-loading {
+      from {
+        -webkit-transform: rotate(0deg);
+      }
+      to {
+        -webkit-transform: rotate(360deg);
+      }
+    }
+
+    .app-switch-slider.loading:before {
+      position: absolute;
+      content: "";
+      height: #{ ($width * 0.4333)-($width * 0.05) }px;
+      width:  #{ ($width * 0.4333)-($width * 0.05) }px;
+      // left: 4px;
+      // bottom: 4px;
+      bottom: #{ ($width * 0.0633333) }px;
+      border: solid #{ ($width * 0.05) }px white;
+      border-radius: 50%;
+      border-right-color: transparent;
+      border-bottom-color: transparent;
+      -webkit-transition: all 0.5s ease-in;
+      -webkit-animation-name: app-switch-slider-loading;
+      -webkit-animation-duration: 1s;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+
+      transition: all 0.5s ease-in;
+      animation-name: app-switch-slider-loading;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      -webkit-transform: translateX(#{ ($width * 0.433333) }px);
+      -ms-transform: translateX(#{ ($width * 0.433333) }px);
+      transform: translateX(#{ ($width * 0.433333) }px);
+    }
+    input:checked + .app-switch-slider:before {
+      -webkit-transform: translateX(#{ ($width * 0.433333) }px);
+      -ms-transform: translateX(#{ ($width * 0.433333) }px);
+      transform: translateX(#{ ($width * 0.433333) }px);
+    }
+    input:checked + .app-switch-slider.loading:before {
+      right: #{ ($width * 0.0333333) }px;
+      left: auto;
+    }
+    input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .app-switch-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(#9b9b9b, 0.3);
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+  }
+}

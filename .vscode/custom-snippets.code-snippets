@@ -1,0 +1,18 @@
+{
+  "rfc": {
+    "prefix": "rfc",
+    "body": ["import React from 'react';", "", "const $ComponentName: React.FC<any> = () => {", "return <div />;", "};", "", "export default $ComponentName;"]
+  },
+  "localizationPrefix":{
+    "prefix":"localizationPrefix",
+    "body": "const localizationPrefix = '$prefix';"
+  },
+  "eslint-disable-next-line max-len,prettier/prettier":{
+    "prefix":"eslint-disable-next-line max-len,prettier/prettier",
+    "body": "eslint-disable-next-line max-len,prettier/prettier"
+  },
+  "dark-theme-scss":{
+    "prefix":"dark-theme-scss",
+    "body": ["body[-app-theme='dark'] {","","","}"],
+  }
+}

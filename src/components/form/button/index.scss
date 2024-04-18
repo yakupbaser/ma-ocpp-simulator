@@ -1,0 +1,42 @@
+.-action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  font-family: "poppins";
+  font-size: 13px;
+  min-height: 37.5px;
+  // border: 1px solid #dddddd;
+  border-radius: 20px !important;
+  // box-shadow: 0 1px 3px #0000003d;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 10px;
+  }
+  &.disabled{
+    opacity: 0.5;
+  }
+  &.primary {
+    background: linear-gradient(175deg, #2F86A6 28.36%, #416D19 80.71%);
+    color: white;
+    &:hover {
+      box-shadow: 0px 7px 10px -8px #416D19;
+    }
+  }
+
+  &.danger {
+    background: linear-gradient(175deg, #d90606 28.36%, #700000 80.71%);
+    color: white;
+    &:hover {
+      box-shadow: 0px 7px 10px -8px #700000;
+    }
+  }
+  &.secondary {
+    background: linear-gradient(175deg, #005cf4 28.36%, #00348a 80.71%);
+    color: white;
+    &:hover {
+      box-shadow: 0px 7px 10px -8px #00348a;
+    }
+  }
+}

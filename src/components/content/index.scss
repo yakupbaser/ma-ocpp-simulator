@@ -1,0 +1,49 @@
+.app-content {
+  width: calc(100vw - 250px);
+  .app-content-container {
+    min-height: calc(100vh - 125px);
+    width: calc(100% - 50px);
+    background-color: white;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    border: 1px solid #416d1926;
+    box-shadow: 0px 0px 8px -8px #416d19;
+    .title {
+      cursor: default;
+      padding: 20px;
+      width: calc(100% - 40px);
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      font-family: "Quicksand";
+      box-shadow: 0px 9px 15px -13px #395d072e;
+    }
+    .content {
+      width: calc(100% - 40px);
+      padding: 20px;
+      padding-top: 0px;
+    }
+  }
+}
+.socket-connection-status-container {
+  height: 50px;
+  padding-left: 25px;
+  width: calc(100vw - 250px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-family: "Quicksand";
+  font-weight: 500;
+  cursor: default;
+  &.connected {
+    background: #0e1e00;
+  }
+  &.disconnected {
+    background: #C21010;
+  }
+}

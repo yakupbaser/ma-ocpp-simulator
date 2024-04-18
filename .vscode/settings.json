@@ -1,0 +1,61 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "files.autoSaveDelay": 30000,
+  "eslint.alwaysShowStatus": true,
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "files.exclude": {
+    ".eslintignore": true,
+    ".git": true,
+    ".idea": true,
+    "**/.git": false,
+    "**/.hg": true,
+    "**/.svn": true,
+    "**/bower_components": true,
+    "**/jspm_packages": true,
+    "**/node_modules": true,
+    "android/": true,
+    "ios/": true,
+    "md_items/": true,
+    "**/.eslintcache": true,
+    "**/.gitignore": true,
+    "**/package-lock.json": true,
+    "**/yarn.lock": true
+  },
+  "debug.console.fontSize": 13,
+  "workbench.list.openMode": "doubleClick",
+  "[javascript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "explorer.confirmDelete": false,
+  "eslint.validate": [{ "language": "typescript", "autoFix": true }],
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": -0.837,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "prettier.requireConfig": true,
+  "prettier.printWidth": 250,
+  "prettier.tabWidth": 1,
+  "prettier.useTabs": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.fontSize": 14,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "git.ignoreRebaseWarning": true,
+  "git.autofetch": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "search.exclude": {
+    "**/build": true
+  },
+  "editor.tabSize": 2,
+  "svg.preview.background": "dark-transparent",
+  "accessibility.signals.sounds.volume": 0,
+  "editor.accessibilitySupport": "off"
+}
