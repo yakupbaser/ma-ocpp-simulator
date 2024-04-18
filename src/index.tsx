@@ -5,8 +5,8 @@ import App from './App';
 import './index.scss';
 import './app-message.scss';
 import './helpers/translator';
-// eslint-disable-next-line max-len,prettier/prettier
-const root = ReactDOM.createRoot( document.getElementById('root') as HTMLElement );
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
   <BrowserRouter>
     <App />
