@@ -135,7 +135,15 @@ export default class AppChargePointConnector {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
     carCurrentBatteryWatt += energyWatt;
     newStatus.car.currentBatteryPercent = Math.min(100, parseFloat(((carCurrentBatteryWatt / (batteryCapacityKiloWatt * 1000)) * 100).toFixed(4)));
-    if (newStatus.car.currentBatteryPercent >= 100) this.setStatus({ ...newStatus, ocppStatus: OCPPConnectorStatus.finishing });
+    if (newStatus.car.currentBatteryPercent >= 100) {
+      this.setStatus({ ...newStatus, ocppStatus: OCPPConnectorStatus.finishing });
+      const reduxStore = _.cloneDeep(ReduxStore.getState());
+      const currentTransaction = reduxStore.transactions.data?.find((e) => e.connectorId === this.connectorNumber);
+      if (currentTransaction) {
+        this.stopTransaction({ transactionId: currentTransaction?.transactionId });
+        return;
+      }
+    }
     const newStatuses = { ...reduxConnectorStatuses, [this.connectorNumber]: newStatus };
     ReduxStore.dispatch({ type: ReduxSymbols.connectorsStatus.success, data: newStatuses });
     LocalStorage.setConnectorStatuses(newStatuses);
