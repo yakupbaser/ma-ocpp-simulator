@@ -1,6 +1,7 @@
 enum LocalStorageKey {
   settings = 'OCPP_SETTINGS',
-  transaction = 'TRANSACTION',
+  transactions = 'TRANSACTIONS',
+  connectorStatuses = 'CONNECTOR_STATUSES',
 }
 
 export default LocalStorageKey;

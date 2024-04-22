@@ -8,6 +8,10 @@
     width: #{$width}px;
     height: #{$height}px;
 
+    &.disabled{
+      pointer-events: none;
+      opacity: 0.3;
+    }
     .app-switch-slider:not(.loading):before {
       position: absolute;
       content: "";
@@ -21,11 +25,11 @@
     }
 
     input:checked + .app-switch-slider {
-      background-color: #530eb5;
+      background-color: #2F86A6;
     }
 
     input:focus + .app-switch-slider {
-      box-shadow: 0 0 1px #530eb5;
+      box-shadow: 0 0 1px #2F86A6;
     }
 
     .app-switch-slider.round {

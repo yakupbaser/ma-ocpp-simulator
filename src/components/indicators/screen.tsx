@@ -8,6 +8,7 @@ const AppIndicatorScreen: React.FC<IAppIndicatorScreen> = () => {
       style={{
         width: window.innerWidth - 250,
         height: window.innerHeight,
+        paddingLeft: 250,
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',

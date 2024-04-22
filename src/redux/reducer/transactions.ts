@@ -6,6 +6,9 @@ export interface IRTransaction {
   transactionId: string;
   startMeter: number;
   connectorId: number;
+  idTag: string;
+  currentBatteryPercent: number;
+  startAt: number;
 }
 
-export default ReduxHelper.generateReducer<IRTransaction>(ReduxSymbols.transaction, LocalStorage.getTransaction(), false);
+export default ReduxHelper.generateReducer<IRTransaction[]>(ReduxSymbols.transactions, LocalStorage.getTransactions(), false);

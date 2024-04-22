@@ -16,6 +16,7 @@ const generateLazy = (screen: string, sleepTime = 750) => {
 };
 const AppRoutes: IAppRoute[] = [
   { path: '/', name: 'Home', screen: generateLazy('/home') },
+  { path: '/charge-point', name: 'Charge Point', screen: generateLazy('/charge_point') },
   { path: '/settings', name: 'Settings', screen: generateLazy('/settings') },
 ];
 

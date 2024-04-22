@@ -23,6 +23,7 @@ module.exports = {
         unnamedComponents: 'arrow-function',
       },
     ],
+    'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'jsx-a11y/control-has-associated-label': 'off',
     '@typescript-eslint/no-non-null-assertion': 'off',
