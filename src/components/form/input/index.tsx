@@ -49,7 +49,6 @@ const AppInput: React.FC<IAppInput> = (props) => {
   };
   const checkIsValid = (disableChangeMessage = false): boolean => {
     const isWritedAnyValueOnInput = !!props.value && props.value.toString().length > 0;
-    // console.log('isWritedAnyValueOnInput', isWritedAnyValueOnInput, props.validationType, AppHelper.urlControl(props.value?.toString() ?? ''));
     let result = true;
     let message;
     if (isWritedAnyValueOnInput && !!props.mask && props.mask.length !== props.value?.toString().length) {
