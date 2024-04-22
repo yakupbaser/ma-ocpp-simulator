@@ -1,6 +1,7 @@
 class AppHelper {
   // eslint-disable-next-line max-len,prettier/prettier, no-promise-executor-return
   static sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+  static random = (max: number, min = 0) => Math.floor(Math.random() * (max - min + 1) + min);
   static generateUniqueId = () => {
     return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
       // eslint-disable-next-line no-bitwise

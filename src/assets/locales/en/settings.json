@@ -1,12 +1,35 @@
 {
   "pageTitle": "Settings",
+  "chargePointVendor": "Charge Point Vendor",
+  "chargePointModel": "Charge Point Model",
+  "chargePointSerialNumber": "Charge Point Serial Number",
+  "chargeBoxSerialNumber": "Charge Box Serial Number",
+  "firmwareVersion": "Firmware Version",
+  "iccid": "ICCID",
+  "imsi": "IMSI",
+  "meterType": "Meter Type",
+  "meterSerialNumber": "Meter Serial Number",
+  "numberOfConnectors": "Number of connectors",
   "ocppWSUrl": "OCPP Websocket url",
   "chargePointCode": "Charge Point Code",
   "heartbeatInterval": "Heartbeat Interval(sec.)",
   "meterValueInterval": "Meter Value Interval(sec.)",
+
   "ocppWSUrlRule": "Plase enter OCPP Websocket url",
   "chargePointCodeRule": "Please enter Charge Point Code",
   "heartbeatIntervalRule": "Please enter Heartbeat Interval",
   "meterValueIntervalRule": "Please enter Meter Value Interval",
+
+  "numberOfConnectorsRule": "Please enter Number of connectors.",
+  "chargePointVendorRule": "Please enter Charge Point Vendor.",
+  "chargePointModelRule": "Please enter Charge Point Model.",
+  "chargePointSerialNumberRule": "Please enter Charge Point Serial Number.",
+  "chargeBoxSerialNumberRule": "Please enter Charge Box Serial Number.",
+  "firmwareVersionRule": "Please enter Firmware Version.",
+  "iccidRule": "Please enter ICCID.",
+  "imsiRule": "Please enter IMSI.",
+  "meterTypeRule": "Please enter Meter Type.",
+  "meterSerialNumberRule": "Please enter Meter Serial Number.",
+
   "updatedSuccessfully": "Settings updated successfully"
 }

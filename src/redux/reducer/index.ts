@@ -2,13 +2,17 @@ import { combineReducers } from 'redux';
 
 import settings from './settings';
 import startTransaction from './start_transaction';
-import transaction from './transaction';
+import transactions from './transactions';
+import connectorStatus from './connector_status';
+import logs from './logs';
 import ReduxSymbols from '../symbols';
 import ReduxHelper from '../../helpers/redux';
 
 export default combineReducers({
+  logs,
   settings,
-  transaction,
+  transactions,
   socketStatus: ReduxHelper.generateReducer<boolean>(ReduxSymbols.socketStatus, false),
   startTransaction,
+  connectorStatus,
 });

@@ -1,0 +1,126 @@
+.charge-point-connectors {
+
+  .connector {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 14px -12px #000000;
+    border: 1px solid #5f5f5f14;
+    margin-bottom: 15px;
+
+    .car-informations {
+      border-left: 1px solid rgba(95, 95, 95, 0.0784313725);
+      padding-left: 15px !important;
+      .item-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 15px;
+        .name {
+          font-size: 15px;
+          font-family: "Poppins";
+          font-weight: 500;
+          width: 140px;
+        }
+        .item {
+          width: 200px;
+          input {
+            width: 100%;
+          }
+        }
+        .value {
+          font-size: 12px;
+          font-family: "Poppins";
+          font-weight: 800;
+        }
+      }
+    }
+    .connector-informations{
+
+      padding-right: 15px !important;
+    }
+    .header {
+      display: flex;
+      flex-direction: row;
+      font-size: 13px;
+      justify-content: space-between;
+      font-weight: 500;
+      font-family: "Quicksand";
+      margin-bottom: 7.5px;
+      border-bottom: 1px solid #5f5f5f14;
+      padding-bottom: 7.5px;
+      .status {
+        &.available {
+          color: #4caf50;
+        }
+        &.preparing {
+          color: #ffc107;
+        }
+        &.charging {
+          color: #2196f3;
+        }
+        &.suspendedEVSE {
+          color: #9e9e9e;
+        }
+        &.suspendedEV {
+          color: #9e9e9e;
+        }
+        &.finishing {
+          color: #4caf50;
+        }
+        &.reserved {
+          color: #ff9800;
+        }
+        &.unavailable {
+          color: #f44336;
+        }
+        &.faulted {
+          color: #f44336;
+        }
+      }
+    }
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      align-items: stretch;
+      .action-button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .action {
+          font-family: "Poppins";
+          font-weight: 500;
+          font-size: 14px;
+          color: #091200db;
+        }
+      }
+    }
+  }
+}
+.charge-point-variables{
+  .variable{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 15px !important;
+
+    .variable-name{
+      font-size: 17px;
+      font-family: "Quicksand";
+      font-weight: 500;
+    }
+    .value{
+      font-size: 18px;
+      font-family: "Poppins";
+      font-weight: 800;
+    }
+  }
+}
