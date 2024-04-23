@@ -5,11 +5,14 @@ It is a charge point simulator for testing back-end applications.
 ![](readme-images/main-screen.png)
 
 ### Running on Docker
+First of all clone github project. And open root folder run sh codes.
 ```sh
+# clone project
+git clone git@github.com:MuhammedAlmaz/ma-ocpp-simulator.git
+
 # build docker for creating image of application
 docker build --tag 'ma-charge-point-simulator' .
-```
-```sh
+
 # Create container which image you created before
 docker run -p 2024:80 -d ma-charge-point-simulator
 ```
