@@ -5,6 +5,7 @@
   "add": "Add",
   "save": "Save",
   "update": "Update",
+  "idTagIsInvalid": "Please check idTag value it is invalid.",
   "validation": {
     "minNumber": "You should enter minimum ___NUMBER___ .",
     "maxNumber": "You should enter maximum ___NUMBER___ .",

@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Col, Row } from 'react-grid-system';
 import { IRConnectorStatus, IRConnectorStatusConnectedCar, IRConnectorStatuses } from '../../redux/reducer/connector_status';
-import { AppSwitch } from '../../components/form';
+import { AppButton, AppInput, AppSwitch } from '../../components/form';
 import AppChargePoint from '../../helpers/charge_point';
 import AppHelper from '../../helpers/app';
 import OCPPConnectorStatus from '../../constants/ocpp/connector_statuses';
@@ -12,6 +12,8 @@ import OCPPConnectorAvailabilityType from '../../constants/ocpp/connector_availa
 import ReduxSymbols from '../../redux/symbols';
 import ReduxStore from '../../redux';
 import { IReduxState } from '../../helpers/redux';
+import OCPPEvent from '../../constants/ocpp/events';
+import AppMessage from '../../helpers/message';
 
 interface IChargePointScreenConnector {
   connectorNumber: number;
@@ -22,8 +24,10 @@ const ChargePointScreenConnector: React.FC<IChargePointScreenConnector> = (props
   const connectorStatus = connectorStatuses.data![props.connectorNumber]!;
   const localizationPrefix = 'chargePoint.connector';
   const [changingKey, setChangingKey] = useState<ConnectorSwitchKeys | undefined>(undefined);
+  const [idTag, setIdTag] = useState<string | undefined>(undefined);
   const { t } = useTranslation();
   const [currentWatt, setCurrentWatt] = useState(0);
+  const dispatch = useDispatch();
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentWatt(AppChargePoint.getConnector(props.connectorNumber)?.currentEnergyWatt ?? 0);
@@ -32,7 +36,10 @@ const ChargePointScreenConnector: React.FC<IChargePointScreenConnector> = (props
       clearInterval(interval);
     };
   }, []);
-  // const dispatch = useDispatch();
+  const onStartTransactionClick = () => {
+    if ((idTag?.length ?? 0) === 0) return AppMessage.showError({ message: t(`${localizationPrefix}.pleaseEnterValidIDTag`) });
+    dispatch({ type: ReduxSymbols.startTransaction.call, data: { connectorId: props.connectorNumber, idTag, event: OCPPEvent.authorize } });
+  };
   const onConnectorStatusChange = async (status: IRConnectorStatus, key: ConnectorSwitchKeys) => {
     setChangingKey(key);
     const connector = AppChargePoint.connectors.find((e) => e.getNumber() === props.connectorNumber);
@@ -124,6 +131,13 @@ const ChargePointScreenConnector: React.FC<IChargePointScreenConnector> = (props
         {renderCarInformationRange('currentBatteryPercent', 100, '%')}
         {renderCarInformationRange('batteryCapacityKiloWatt', 150, 'kW')}
         {renderCarInformationRange('batteryVoltage', 800, 'V')}
+        <div
+          className="start-transaction-container"
+          hidden={connectorStatus.ocppStatus !== OCPPConnectorStatus.preparing && connectorStatus.ocppStatus !== OCPPConnectorStatus.finishing}
+        >
+          <AppInput value={idTag} onChange={setIdTag} placeholder="idTag" />
+          <AppButton text={t(`${localizationPrefix}.startTransaction`)} type="primary" onClick={onStartTransactionClick} />
+        </div>
       </Col>
     </Row>
   );

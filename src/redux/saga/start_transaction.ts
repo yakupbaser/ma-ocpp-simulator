@@ -1,6 +1,7 @@
 import { put, takeLatest } from 'redux-saga/effects';
 import _ from 'lodash';
 import moment from 'moment';
+import { t } from 'i18next';
 import ReduxSymbols from '../symbols';
 import OCPPMessageType from '../../constants/ocpp/message_types';
 import AppHelper from '../../helpers/app';
@@ -10,6 +11,7 @@ import OCPPConnectorStatus from '../../constants/ocpp/connector_statuses';
 import AppSocket from '../../socket';
 import ReduxStore from '..';
 import AppChargePoint from '../../helpers/charge_point';
+import AppMessage from '../../helpers/message';
 
 const _authorizeCallback = (connectorId: number, socketData: any) => {
   // Authorize response
@@ -24,7 +26,7 @@ const _authorizeCallback = (connectorId: number, socketData: any) => {
       data: { ...startTransactionData, event: OCPPEvent.startTransaction, meterStart: Math.floor(AppChargePoint.getConnector(connectorId)?.currentEnergyWatt ?? 0) },
     });
   } else {
-    // TODO: Not accepted authorize
+    AppMessage.showError({ message: t('global.idTagIsInvalid') });
   }
 };
 const _startTransactionCallback = (connectorId: number, idTag: any, socketData: any) => {
