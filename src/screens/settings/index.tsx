@@ -130,4 +130,3 @@ const SettingsScren: React.FC<any> = () => {
 };
 
 export default SettingsScren;
-// wss://dev-gio..io/evc/api/ocpp/19CC716B-73CA-4BCE-A7EE-37E95366E8C7/313059181013

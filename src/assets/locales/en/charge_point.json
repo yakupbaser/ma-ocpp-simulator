@@ -1,16 +1,18 @@
 {
   "pageTitle": "Charge Point",
-  "power":"Power",
-  "amper":"Amper",
-  "voltage":"Voltage",
+  "power": "Power",
+  "amper": "Amper",
+  "voltage": "Voltage",
   "connector": {
-  "energy":"Energy",
+    "pleaseEnterValidIDTag": "Please enter a valid id tag.",
+    "startTransaction": "Start Transaction",
+    "energy": "Energy",
     "connectorNumber": "Connector Number",
     "connectorReady": "Connector is Ready",
     "carIsReady": "Car is Ready",
     "chargingSocketPlugged": "Charging Socket Plugged",
     "carInformation": {
-      "title":"Charging Car Informations",
+      "title": "Charging Car Informations",
       "currentBatteryPercent": "Battery Percent",
       "batteryVoltage": "Battery Voltage",
       "batteryCapacityKiloWatt": "Battery Capacity"

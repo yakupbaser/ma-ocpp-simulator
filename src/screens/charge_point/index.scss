@@ -1,5 +1,4 @@
 .charge-point-connectors {
-
   .connector {
     background-color: #f3f3f3;
     padding: 15px;
@@ -7,7 +6,13 @@
     box-shadow: 0px 0px 14px -12px #000000;
     border: 1px solid #5f5f5f14;
     margin-bottom: 15px;
-
+    .start-transaction-container {
+      width: 400px;
+      margin-top: 15px;
+      input{
+        margin-bottom: 15px;
+      }
+    }
     .car-informations {
       border-left: 1px solid rgba(95, 95, 95, 0.0784313725);
       padding-left: 15px !important;
@@ -36,8 +41,7 @@
         }
       }
     }
-    .connector-informations{
-
+    .connector-informations {
       padding-right: 15px !important;
     }
     .header {
@@ -102,8 +106,8 @@
     }
   }
 }
-.charge-point-variables{
-  .variable{
+.charge-point-variables {
+  .variable {
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -112,12 +116,12 @@
     align-items: center;
     margin-bottom: 15px !important;
 
-    .variable-name{
+    .variable-name {
       font-size: 17px;
       font-family: "Quicksand";
       font-weight: 500;
     }
-    .value{
+    .value {
       font-size: 18px;
       font-family: "Poppins";
       font-weight: 800;
