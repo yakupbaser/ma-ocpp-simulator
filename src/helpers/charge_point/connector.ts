@@ -93,6 +93,7 @@ export default class AppChargePointConnector {
         ],
       };
       const socketPayload: OutgoingWebSocketPayload = [OCPPMessageType.callMessage, AppHelper.generateUniqueId(), OCPPEvent.meterValues, payload];
+      ReduxStore.dispatch({ type: ReduxSymbols.logs.call, data: { information: 'Sending MeterValues to back-end', data: socketPayload } });
       AppSocket.sendPayload(socketPayload);
       const sleepTime = (settings?.configurationKeys.meterValueInterval ?? 1) * 1000;
       await AppHelper.sleep(sleepTime);
