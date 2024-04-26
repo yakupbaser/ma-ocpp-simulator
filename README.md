@@ -1,6 +1,6 @@
 # <h1>Charge Point Simulator</h1>
 
-It is a charge point simulator for testing back-end applications. 
+It is a charge point simulator for testing back-end applications. This client is supporting  OCPP 1.6 protocol.
 
 ![](readme-images/main-screen.png)
 
@@ -41,6 +41,7 @@ Finnaly, you can open http://localhost:2024 on your browser and the front-end ap
 - Store settings and variables on database with back-end application
 - Multiple Car Settings (Tesla, TOGG, Xiaomi, Porsche etc.)
 - Error Handling like OverVoltage, WeakSignal, HighTemperature etc.
+- OCPP 2.0.1 Functions
 
 ## License
 `ma-ocpp-simulator` is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
